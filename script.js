@@ -1,4 +1,114 @@
+var WORKS = [
+    {
+        name: 'Extensive Logistics',
+        numPages: 9,
+    },
+    {
+        name: 'Digital Universe',
+        numPages: 9,
+    },
+    {
+        name: 'Controlled Energy',
+        numPages: 9,
+    }
+];
+
+function toggleCurrent(work) {
+    work.toggleClass('current');
+    work.animate({ opacity: 'toggle' }, 1000);
+}
+
+function proceedCurrent(klass, next, loop) {
+    var current = $(klass + '.current');
+    toggleCurrent(current);
+    var next = current[next]();
+    if (!next.length) {
+        next = current.parent().children()[loop]();
+    }
+    toggleCurrent(next);
+}
+
+function nextCurrent(klass) {
+    proceedCurrent(klass, 'next', 'first');
+}
+
+function prevCurrent(klass) {
+    proceedCurrent(klass, 'prev', 'last');
+}
+
+function toggleFull() {
+    var work = $('.work.current');
+    work.find('.preview').animate({ opacity: 'toggle' }, 1000);
+    work.find('.full').animate({ opacity: 'toggle' }, 1000);
+    $("#controls").animate({ opacity: 'toggle' }, 1000);
+    $("#work_controls").animate({ opacity: 'toggle' }, 1000);
+    var progress = $("#work_controls .progress");
+    progress.css('width', (WORKS[work.index()].numPages * progress.find('.current').width()) + 'px');
+    toggleGrid();
+}
+
+function toggleGrid() {
+    var grid = $("#grid");
+
+    var top = -19, height = 819, zIndex = 'auto';
+    if (grid.height() == 819) {
+        top = 760, height = 41, zIndex = 1;
+    }
+
+    grid.animate(
+        { top: top + "px", height: height + "px" }, 
+        1000 
+    );
+
+    grid.css("z-index", zIndex);
+}
+
+function initPages(work) {
+    var full = work.find('.full');
+    var page0 = full.find('.page.current');
+    var pageTemplate = page0.clone();
+
+    for (var j = 0; j < WORKS[work.index()].numPages; j++) {
+        var page = page0;
+
+        if (j > 0) {
+            page = pageTemplate.clone();
+            page.removeClass('current');
+            full.append(page);
+            page.toggle();
+        }
+
+        page.css('background', 'url(images/work_' + work.index() + '_' + j + '.jpg) center');
+    }
+}
+
+function initWorks() {
+    var works = $('#works');
+    var work0 = works.find('.work');
+    var workTemplate = work0.clone();
+
+    for (var i = 0; i < WORKS.length; i++) {
+        var work = work0;
+
+        if (i > 0) {
+            work = workTemplate.clone();
+            work.removeClass('current');
+            works.append(work);
+            work.toggle();
+        }
+
+        work.find('.preview .background').css('background', 'url(images/work_' + i + '_bg.png) center');
+        work.find('.preview .content').css('background', 'url(images/work_' + i + '.png) center');
+
+        initPages(work);
+    }
+
+    console.log($('#works'));
+}
+
 function init() {
+    initWorks();
+
  	$('#layer1').show();
 	$('#layer2').animate({opacity: "toggle"}, 
 		2000,
@@ -28,77 +138,27 @@ function init() {
             );
 		}
 	);
-	var works = ['work1', 'work2', 'work3'];
-	var currentWork = 0;
 
-    function nextWork() {
-        $('#' + works[currentWork]).animate({opacity: "toggle"}, 1000);
-        if (++currentWork >= works.length) {
-            currentWork = 0;
-        }
-        $('#' + works[currentWork]).animate({opacity: "toggle"}, 1000);
-    };
+    $("#controls .next").click(function() { nextCurrent('.work') });
+    $("#controls .previous").click(function() { prevCurrent('.work') });
+    $("#controls #clickable").click(toggleFull);
 
-    function previousWork() {
-        $('#' + works[currentWork]).animate({opacity: "toggle"}, 1000);
-        if (--currentWork < 0) {
-            currentWork = works.length - 1;
-        }
-        $('#' + works[currentWork]).animate({opacity: "toggle"}, 1000);
+    function updateProgress() {
+        var progress = $("#work_controls .progress .current");
+        progress.css('left', ($('.work.current .page.current').index() * progress.width()) + 'px');
     }
 
-    var pages = ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9',];
-    var currentPage = 0;
-
-    function toggleGrid() {
-        var grid = $("#grid .background");
-
-        var top = -19, height = 819, zIndex = 'auto';
-        if (grid.height() == 819) {
-            top = 760, height = 41, zIndex = 1;
+    $("#work_controls #close").click(toggleFull);
+    $("#work_controls .next").click(
+        function() {
+            nextCurrent('.work.current .page') 
+            updateProgress();    
         }
-
-        grid.animate(
-            { top: top + "px", height: height + "px" }, 
-            1000 
-        );
-
-        grid.css("z-index", zIndex);
-    }
-
-    function toggleWork() {
-        var workId = "#" + works[currentWork];
-        $(workId + " .preview").animate({ opacity: "toggle"}, 1000);
-        $(workId + " .full").animate({ opacity: "toggle"}, 1000);
-        $("#controls").animate({ opacity: "toggle"}, 1000);
-        $("#work_controls").animate({ opacity: "toggle"}, 1000);
-        $("#work_controls .progress").css('width', (pages.length * 50) + 'px');
-        toggleGrid();
-    }
-
-    function nextPage() {
-        $('#' + works[currentWork] + ' .' + pages[currentPage]).animate({opacity: "toggle"}, 1000);
-        if (++currentPage >= pages.length) {
-            currentPage = 0;
+    );
+    $("#work_controls .previous").click(
+        function() { 
+            prevCurrent('.work.current .page');
+            updateProgress();
         }
-        $('#' + works[currentWork] + ' .' + pages[currentPage]).animate({opacity: "toggle"}, 1000);
-        $("#work_controls .current").css('left', (currentPage * 50) + 'px');
-    }
-
-    function previousPage() {
-        $('#' + works[currentWork] + ' .' + pages[currentPage]).animate({opacity: "toggle"}, 1000);
-        if (--currentPage < 0) {
-            currentPage = pages.length - 1;
-        }
-        $('#' + works[currentWork] + ' .' + pages[currentPage]).animate({opacity: "toggle"}, 1000);
-        $("#work_controls .current").css('left', (currentPage * 50) + 'px');
-    }
-
-    $("#controls .next").click(nextWork);
-    $("#controls .previous").click(previousWork);
-    $("#controls #clickable").click(toggleWork);
-
-    $("#work_controls #close").click(toggleWork);
-    $("#work_controls .next").click(nextPage);
-    $("#work_controls .previous").click(previousPage);
+    );
 }

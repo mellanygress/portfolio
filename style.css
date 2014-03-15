@@ -88,56 +88,27 @@ body, div {
     z-index: -1;  
 }
 
-#line {
-	background: url("images/line_1.jpg") center;
+.preview, .preview .background, .preview .content, .full .page {
 	position: absolute;
-	width: 407px;
-    height: 3px;
-
+	height: 100%;
+	width: 100%;
 }
-#line_2 {
-	background: url("images/line_2.jpg") center;
+
+.preview .background {
+	z-index: -1;
+}
+
+.full {
+	display: none;
+}
+
+#grid {
 	position: absolute;
-	width: 59px;
-    height: 3px;
+	top: -19px; 
+	height: 819px;
+	width: 100%;
+	background: url("images/bg_grid_2.png") top; 
 }
-.background, .content, .full .page1, .page2, .page3, .page4, .page5, .page6, .page7, .page8, .page9{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-#work1 .background  { background: url("images/tr_1.png") center no-repeat; }
-#work1 .content     { background: url("images/port_1.png") center; }
-#work1 .full 		{ display: none;}
-#work1 .full .page1 { background: url("images/work_1_1.jpg") center no-repeat; }
-#work1 .full .page2 { display: none; background: url("images/work_1_2.jpg") center no-repeat; }
-#work1 .full .page3 { display: none; background: url("images/work_1_3.jpg") center no-repeat; }
-#work1 .full .page4 { display: none; background: url("images/work_1_4.jpg") center no-repeat; }
-#work1 .full .page5 { display: none; background: url("images/work_1_5.jpg") center no-repeat; }
-#work1 .full .page6 { display: none; background: url("images/work_1_6.jpg") center no-repeat; }
-#work1 .full .page7 { display: none; background: url("images/work_1_7.jpg") center no-repeat; }
-#work1 .full .page8 { display: none; background: url("images/work_1_8.jpg") center no-repeat; }
-#work1 .full .page9 { display: none; background: url("images/work_1_9.jpg") center no-repeat; }
-
-
-#work2 				{ display: none }
-#work2 .background  { background: url("images/tr_2.png") center; }
-#work2 .content     { background: url("images/port_2.png") center; }
-#work2 .full 		{ display: none;}
-#work2 .full .page1 { background: url("images/work_2_1.jpg") center no-repeat; }
-#work2 .full .page2 { background: url("images/work_2_2.jpg") center no-repeat; }
-#work2 .full .page3 { background: url("images/work_2_3.jpg") center no-repeat; }
-#work2 .full .page4 { background: url("images/work_2_4.jpg") center no-repeat; }
-#work2 .full .page5 { background: url("images/work_2_5.jpg") center no-repeat; }
-#work2 .full .page6 { background: url("images/work_2_6.jpg") center no-repeat; }
-#work2 .full .page7 { background: url("images/work_2_7.jpg") center no-repeat; }
-
-#work3				{ display: none }
-#work3 .background  { background: url("images/tr_3.png") center; }
-#work3 .content     { background: url("images/port_3.png") center; }
-
-#grid  .background  { top: -19px; height: 819px; background: url("images/bg_grid_2.png") top; }
 
 #clickable {
 	position: absolute;
@@ -163,6 +134,7 @@ body, div {
     width: 25px;
     height: 100%;
 }
+
 #controls .next {
     background: url("images/arrow_right_0.png") center no-repeat;
     position: absolute;
@@ -208,11 +180,11 @@ body, div {
 }
 
 .progress {
+	z-index: 2;
 	background: black;
 	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	width: 590px;
+	bottom: 17px;
+	left: 238px;
 	height: 5px;
 }
 
@@ -220,5 +192,5 @@ body, div {
 	position: absolute;
 	background: #f3f315;
 	height: 100%;
-	width: 59px;
+	width: 58px;
 }
