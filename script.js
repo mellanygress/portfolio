@@ -51,7 +51,7 @@ function toggleGrid() {
     var grid = $("#grid");
 
     var top = -19, height = 819, zIndex = 'auto';
-    if (grid.height() == 819) {
+    if (!grid.hasClass('bottom')) {
         top = 760, height = 41, zIndex = 1;
     }
 
@@ -61,6 +61,7 @@ function toggleGrid() {
     );
 
     grid.css("z-index", zIndex);
+    grid.toggleClass('bottom');
 }
 
 function initPages(work) {
