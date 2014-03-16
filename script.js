@@ -50,8 +50,21 @@ function prevCurrent(klass) {
 
 function toggleFull() {
     var work = $('.work.current');
-    work.find('.preview').animate({ opacity: 'toggle' }, 1000);
-    work.find('.full').animate({ opacity: 'toggle' }, 1000);
+    var preview = work.find('.preview');
+    var full = work.find('.full');
+
+    if (!full.is(':visible')) {
+        var current = full.find('.page.current');
+        var first = full.find('.page:first');
+        if (current[0] !== first[0]) {
+            current.removeClass('current').hide();
+            first.addClass('current').show();
+        }
+    }
+
+    full.animate({ opacity: 'toggle' }, 1000);
+    preview.animate({ opacity: 'toggle' }, 1000);
+
     $("#controls").animate({ opacity: 'toggle' }, 1000);
     $("#work_controls").animate({ opacity: 'toggle' }, 1000);
     $("#menu").toggle('slide');
