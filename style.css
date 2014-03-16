@@ -20,13 +20,28 @@ body, div {
 	background: url("images/text_designer.png");
 }
 
+#menu ul {
+	margin: 0;
+	padding: 1em;
+	list-style-type: none;
+}
+
+#menu li {
+	margin-left: 0;
+	display: block;
+}
+
+#menu_works  { background: url("images/menu_works.png") no-repeat }
+#menu_skills { background: url("images/menu_skills.png") no-repeat }
+#menu_about  { background: url("images/menu_about.png") no-repeat }
+
 #menu {
 	position: fixed;
-	left: -100px;
-	width: 117px;
-	background: #f3f315;
-	height: 100%;
-	text-align: left;
+	background: url("images/menu.png");
+	left:0px;
+	top:0px;
+	width: 210px;
+	height: 153px;
 	z-index: 5;
 }
 

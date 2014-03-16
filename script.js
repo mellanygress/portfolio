@@ -42,6 +42,7 @@ function toggleFull() {
     work.find('.full').animate({ opacity: 'toggle' }, 1000);
     $("#controls").animate({ opacity: 'toggle' }, 1000);
     $("#work_controls").animate({ opacity: 'toggle' }, 1000);
+    $("#menu").toggle('slide');
     var progress = $("#work_controls .progress");
     progress.css('width', (WORKS[work.index()].numPages * progress.find('.current').width()) + 'px');
     toggleGrid();
@@ -117,7 +118,7 @@ function init() {
 			$('#layer3').animate({opacity: "toggle"}, 3000);
 		}
 	);
-	$("#menu").hover(
+	$("#menu1").hover(
 		function(e) {
 			if (this.animatingShow) return;
 			this.animatingShow = true;
