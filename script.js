@@ -10,7 +10,19 @@ var WORKS = [
     {
         name: 'Controlled Energy',
         numPages: 9,
-    }
+     },
+    {
+        name: 'Misterious Party',
+        numPages: 4,
+    },
+    {
+        name: 'What Women Want',
+        numPages: 3,
+    },
+    {
+        name: 'Business For Friends',
+        numPages: 9,
+    },
 ];
 
 function toggleCurrent(work) {
