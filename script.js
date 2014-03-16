@@ -46,6 +46,31 @@ function toggleFull() {
     var progress = $("#work_controls .progress");
     progress.css('width', (WORKS[work.index()].numPages * progress.find('.current').width()) + 'px');
     toggleGrid();
+
+    var part2 = $('#part2');
+    var exclusive = part2.hasClass('exclusive');
+
+    
+    if (exclusive) {
+        part2.css('top', 800);
+        $('html, body').scrollTop(800);
+    }
+    $('#part1').toggle();
+    $('#part3').toggle();
+    $('#part4').toggle();
+
+    $('.work.current .preview .background').toggle();
+
+    if (!exclusive) {
+        part2.animate({ top: 0 }, 200);
+    }
+
+    if (exclusive) {
+        part2.css('top', 800);
+        //$("html, body").animate({ scrollTop:  605 }, 1500);
+    }
+
+    part2.toggleClass('exclusive');
 }
 
 function toggleGrid() {
@@ -58,7 +83,7 @@ function toggleGrid() {
 
     grid.animate(
         { top: top + "px", height: height + "px" }, 
-        1000 
+        500
     );
 
     grid.css("z-index", zIndex);
