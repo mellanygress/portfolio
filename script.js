@@ -72,30 +72,29 @@ function toggleFull() {
     progress.css('width', (WORKS[work.index()].numPages * progress.find('.current').width()) + 'px');
     toggleGrid();
 
-    var part2 = $('#part2');
-    var exclusive = part2.hasClass('exclusive');
-
+    var works = $('#works');
+    var exclusive = works.hasClass('exclusive');
     
     if (exclusive) {
-        part2.css('top', 800);
+        works.css('top', 800);
         $('html, body').scrollTop(800);
     }
-    $('#part1').toggle();
-    $('#part3').toggle();
-    $('#part4').toggle();
+    $('#intro').toggle();
+    $('#skills').toggle();
+    $('#about').toggle();
 
     $('.work.current .preview .background').toggle();
 
     if (!exclusive) {
-        part2.animate({ top: 0 }, 200);
+        works.animate({ top: 0 }, 200);
     }
 
     if (exclusive) {
-        part2.css('top', 800);
+        works.css('top', 800);
         //$("html, body").animate({ scrollTop:  605 }, 1500);
     }
 
-    part2.toggleClass('exclusive');
+    works.toggleClass('exclusive');
 }
 
 function toggleGrid() {
@@ -135,7 +134,7 @@ function initPages(work) {
 }
 
 function initWorks() {
-    var works = $('#works');
+    var works = $('#works_');
     var work0 = works.find('.work');
     var workTemplate = work0.clone();
 
@@ -154,8 +153,6 @@ function initWorks() {
 
         initPages(work);
     }
-
-    console.log($('#works'));
 }
 
 function init() {
@@ -168,6 +165,33 @@ function init() {
 			$('#layer3').animate({opacity: "toggle"}, 3000);
 		}
 	);
+    $(window).scroll(
+        function() {
+            var scrollTop = $(window).scrollTop();
+
+            $('section').each(
+                function(n, section) {
+                    var menuItem = $('#menu_' + section.id);
+                    var isCurrent = menuItem.hasClass('current');
+
+                    var inside = scrollTop > section.offsetTop - 10 && scrollTop < (section.offsetTop + 800);
+
+                    if (!isCurrent) {
+                        if (inside) {
+                            menuItem.toggleClass('current');
+                            menuItem.animate({ 'background-position-x': '+10px' });
+                        }
+                    }
+                    else {
+                        if (!inside) {
+                            menuItem.toggleClass('current');
+                            menuItem.animate({ 'background-position-x': '0px' });
+                        }
+                    }
+                }
+            );
+        }
+    );
 	$("#menu1").hover(
 		function(e) {
 			if (this.animatingShow) return;
