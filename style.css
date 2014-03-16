@@ -136,9 +136,9 @@ body, div {
 #controls {
 	position: absolute;
 	margin-left: 50%;
-	top: 261px;
-	left: -598px;
-	width: 1195px;
+	top: 241px;
+	left: -588px;
+	width: 1175px;
 	height: 352px;
 }
 
@@ -146,7 +146,7 @@ body, div {
     background: url("images/arrow_left_0.png") center no-repeat;
     position: absolute;
     left: 0px;
-    width: 25px;
+    width: 78px;
     height: 100%;
 }
 
@@ -154,7 +154,7 @@ body, div {
     background: url("images/arrow_right_0.png") center no-repeat;
     position: absolute;
     right: 0px;
-    width: 25px;
+    width: 78px;
     height: 100%;
 }
 
@@ -168,29 +168,27 @@ body, div {
 }
 
 #work_controls .previous {
-    background: url("images/arrow_left.png") center no-repeat;
+    background: url("images/arrow_left_0.png") center no-repeat;
     position: absolute;
-    top: 38px;
     left: -117px;
-    width: 65px;
+    width: 78px;
     height: 100%;
 }
 
 #work_controls .next {
-    background: url("images/arrow_right.png") center no-repeat;
+    background: url("images/arrow_right_0.png") center no-repeat;
     position: absolute;
-    top: 38px;
     right: 72px;
-    width: 65px;
+    width: 78px;
     height: 100%;
 }
 
 #close {
     background: url("images/close_x.png") center no-repeat;
     position: absolute;
-    top: -330px;
-    left: 470px;
-    width: 65px;
+    top: -320px;
+    left: 459px;
+    width: 79px;
     height: 100%;
 }
 
