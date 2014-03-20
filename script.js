@@ -18,6 +18,19 @@ var WORKS = [
     {
         name: 'What Women Want',
         numPages: 3,
+        customPages: {
+            1: {
+                type: 'video',
+                src: 'kotiki_preview.mp4',
+                css: {
+                    position: 'absolute',
+                    //width: '741px',
+                    height: '464px',
+                    top: '200px',
+                    left: '300px',
+                }
+            }
+        } 
     },
     {
         name: 'Business For Friends',
@@ -32,11 +45,23 @@ function toggleCurrent(work) {
 
 function proceedCurrent(klass, next, loop) {
     var current = $(klass + '.current');
+
     toggleCurrent(current);
+
+    var onexit = current[0].onexit;
+    if (onexit)
+        onexit();
+
     var next = current[next]();
+
     if (!next.length) {
         next = current.parent().children()[loop]();
     }
+
+    var onenter = next[0].onenter;
+    if (onenter)
+        onenter();
+
     toggleCurrent(next);
 }
 
@@ -118,9 +143,11 @@ function initPages(work) {
     var full = work.find('.full');
     var page0 = full.find('.page.current');
     var pageTemplate = page0.clone();
+    var workInfo = WORKS[work.index()];
 
-    for (var j = 0; j < WORKS[work.index()].numPages; j++) {
+    for (var j = 0; j < workInfo.numPages; j++) {
         var page = page0;
+        var pageInfo = workInfo.customPages && workInfo.customPages[j];
 
         if (j > 0) {
             page = pageTemplate.clone();
@@ -130,6 +157,20 @@ function initPages(work) {
         }
 
         page.css('background', 'url(images/work_' + work.index() + '_' + j + '.jpg) center');
+
+        if (pageInfo && pageInfo.type == 'video') {
+            var video = $('<video/>');
+            video[0].src = pageInfo.src;
+            $.each(
+                pageInfo.css,
+                function(k, v) {
+                    video.css(k, v);
+                }
+            );
+            page.append(video);
+            page[0].onenter = function() { video[0].currentTime = 0; video[0].play(); }
+            page[0].onexit = function() { video[0].pause(); }
+        }
     }
 }
 
