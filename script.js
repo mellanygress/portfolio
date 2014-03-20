@@ -85,6 +85,26 @@ function toggleFull() {
             current.removeClass('current').hide();
             first.addClass('current').show();
         }
+
+        $('body').keydown(
+            function(e) { 
+                switch (e.keyCode) {
+                    case 27:
+                        $('body').off('keydown');
+                        $('#work_controls #close').click();
+                        break;
+                    case 37:
+                        $('#work_controls .previous').click();
+                        break;
+                    case 39:
+                        $('#work_controls .next').click();
+                        break;
+                };
+            }
+        );
+    }
+    else {
+        $('body').off('keydown');
     }
 
     full.animate({ opacity: 'toggle' }, 1000);
