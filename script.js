@@ -18,14 +18,25 @@ var WORKS = [
     {
         name: 'Controlled Energy',
         type: 'web design // ui',
+        description: 'PCM - a leading provider of power protection products with ISO 9001 certificate.',
+        quote: 'It takes as much energy to wish as it does to plan.',
+        quoteAuthor: 'Eleanor Roosevelt',
         numPages: 9,
      },
     {
         name: 'Misterious Party',
+        type: 'promo // event',
+        description: 'Annual New Year Party helded by MERLION had this year the film theme “The Great Gatsby”.',
+        quote: 'The most beautiful thing we can experience is the mysterious. It is the source of all true art and all science.',
+        quoteAuthor:'Albert Einstein',
         numPages: 4,
     },
     {
         name: 'What Women Want',
+        type: 'concept // pr',
+        description: '8 March is like the most mental pain fot men all over the Russia, but some how we found the best present!',
+        quote: 'Women and cats will do as they please, and men and dogs should relax and get used to the idea.',
+        quoteAuthor: 'Robert A. Heinlein',
         numPages: 3,
         customPages: {
             1: {
@@ -43,6 +54,10 @@ var WORKS = [
     },
     {
         name: 'Business For Friends',
+        type: 'web design',
+        description: 'BFF - friendly and confident company find and deliver any good you like from all over the world to Russia',
+        quote: 'Good friends, good books, and sleepy conscience: this is the ideal life.',
+        quoteAuthor:'Mark Twein',
         numPages: 9,
     },
 ];
