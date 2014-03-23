@@ -223,7 +223,7 @@ function initWorks() {
         var content = preview.find('.content');
 
         preview.find('.background').css('background', 'url(images/work_' + i + '_bg.png) center');
-        preview.find('.background2').css('background', 'url(images/work_' + i + 'e.png) center')
+        preview.find('.background2').css('background', 'url(images/work_' + i + '.png) center')
 
         $.each(
             ['type', 'name', 'description'],
