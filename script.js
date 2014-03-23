@@ -253,28 +253,10 @@ function init() {
             );
         }
     );
-	$("#menu1").hover(
 		function(e) {
-			if (this.animatingShow) return;
-			this.animatingShow = true;
-			$("#menu_content").show();
-			$("#menu_content_hidden").hide();
-			$("#menu").animate({ left: "0px" }, 1000, function() { this.animatingShow = false; })
-			;
-		},
-		function(e) {
-			if (this.animatingHide) return;
-			this.animatingHide = true;
 			$("#menu").animate(
-                { left: "-100px"}, 1000, 
                 function() { 
 			        $("#menu_content").hide();
-			        $("#menu_content_hidden").show();
-                    this.animatingHide = false; 
-                }
-            );
-		}
-	);
 
     $("#controls .next").click(function() { nextCurrent('.work') });
     $("#controls .previous").click(function() { prevCurrent('.work') });

@@ -51,24 +51,10 @@ body, div, section {
 	z-index: 5;
 }
 
-#menu_content, #menu_content_hidden {
-	position: absolute;
-	top: 260px;
-	background-position: top right;
 	height: 300px;
 	width: 117px;
-}
 
-#menu_content_hidden {
 	background: url("images/menu_sm.png") no-repeat;
-	background-position: top right;
-}
-
-#menu_content {
-	display: none;
-	background: url("images/menu_big.png") no-repeat;
-}
-
 #layer1, #layer2, #layer3 {
 	display: none;
 }
