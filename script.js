@@ -1,14 +1,23 @@
 var WORKS = [
     {
         name: 'Extensive Logistics',
+        type: 'identity // web',
+        description: 'MERLION &mdash; the largest full-range distributor of the Russian market',
+        quote: 'Everything must be take into account. If the fact will not fit the theory &mdash; let the theory go.',
+        quoteAuthor: 'Agatha Christie',
         numPages: 9,
     },
     {
         name: 'Digital Universe',
+        type: 'web design',
+        description: 'I.R.U. &mdash; reliability and thoroughness, harmony and balance and an endless choice of goods.',
+        quote: 'If you think this Universe is bad, you should see some of the others.',
+        quoteAuthor: 'Philip K. Dick',
         numPages: 9,
     },
     {
         name: 'Controlled Energy',
+        type: 'web design // ui',
         numPages: 9,
      },
     {
@@ -200,6 +209,7 @@ function initWorks() {
     var workTemplate = work0.clone();
 
     for (var i = 0; i < WORKS.length; i++) {
+        var workInfo = WORKS[i];
         var work = work0;
 
         if (i > 0) {
@@ -209,8 +219,21 @@ function initWorks() {
             work.toggle();
         }
 
-        work.find('.preview .background').css('background', 'url(images/work_' + i + '_bg.png) center');
-        work.find('.preview .content').css('background', 'url(images/work_' + i + '.png) center');
+        var preview = work.find('.preview');
+        var content = preview.find('.content');
+
+        preview.find('.background').css('background', 'url(images/work_' + i + '_bg.png) center');
+        preview.find('.background2').css('background', 'url(images/work_' + i + 'e.png) center')
+
+        $.each(
+            ['type', 'name', 'description'],
+            function(i, f) { 
+                content.find('.' + f).html(workInfo[f])
+            }
+        );
+
+        content.find('.quote .quote_text').html('&#8220;' + workInfo.quote + '&#8221;');
+        content.find('.quote .quote_author').html('&mdash; ' + workInfo.quoteAuthor + ' &mdash;');
 
         initPages(work);
     }
