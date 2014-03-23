@@ -121,7 +121,7 @@ function toggleFull() {
     var exclusive = works.hasClass('exclusive');
     
     if (exclusive) {
-        works.css('top', 800);
+        //works.css('top', 800);
         $('html, body').scrollTop(800);
     }
     $('#intro').toggle();
@@ -135,7 +135,7 @@ function toggleFull() {
     }
 
     if (exclusive) {
-        works.css('top', 800);
+        //works.css('top', 800);
         //$("html, body").animate({ scrollTop:  605 }, 1500);
     }
 
@@ -240,13 +240,13 @@ function init() {
                     if (!isCurrent) {
                         if (inside) {
                             menuItem.toggleClass('current');
-                            menuItem.animate({ 'background-position-x': '+10px' });
+                            menuItem.animate({ 'padding-left': '+10px' });
                         }
                     }
                     else {
                         if (!inside) {
                             menuItem.toggleClass('current');
-                            menuItem.animate({ 'background-position-x': '0px' });
+                            menuItem.animate({ 'padding-left': '0px' });
                         }
                     }
                 }
