@@ -261,13 +261,14 @@ function init() {
 
     initWorks();
 
- 	$('#layer1').show();
-	$('#layer2').animate({opacity: "toggle"}, 
-		2000,
+	$('#strike').animate(
+        { opacity: 'toggle' }, 
+		1000,
 		function() {
-			$('#layer3').animate({opacity: "toggle"}, 3000);
+			$('#digitaldesigner').animate({ opacity: 'toggle' }, 2000);
 		}
 	);
+
     $(window).scroll(
         function() {
             var scrollTop = $(window).scrollTop();

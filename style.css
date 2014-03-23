@@ -16,28 +16,44 @@ a:hover {
 	background-color: black;
 }
 
-#background {
-	background: url("images/bg.jpg") no-repeat;
-	/*z-index:-1;*/
+#iwould { padding-top: 3em }
+
+#iwould, #goodgirl {
+    font-size: 68pt;
+    font-family: "Quicksand Light";
+    font-style: italic;
 }
 
-#layer1 {
-	background: url("images/text.png");
+#whoami {
+    display: inline-block;
+    position: relative;
 }
 
-#layer2 {
-	background: url("images/line.png")
+#goodgirl { position: relative; }
+
+#digitaldesigner {
+    position: absolute;
+    top: -0.2em;
+    font-size: 26pt;
+    font-style: normal;
+    padding: 0.8em 0.2em 0.8em 0.2em;
+    white-space: nowrap;
+    display: none;
 }
 
-#layer3 {
-	background: url("images/text_designer.png");
+#strike {
+    position: absolute;
+    border-bottom: 1px solid #f3f315;
+    top: 50%;
+    width: 102%;
+    display: none;
 }
 
-@font-face {
-   font-family: Quicksand;
-   font-weight: lighter;
-   src: local("Quicksand Light"),
-   url(fonts/Quicksand_Light.otf);
+#ifyou {
+    font-family: Arial;
+    text-transform: uppercase;
+    font-size: 68pt;
+    color: #f3f315;
 }
 
 @font-face {
@@ -52,6 +68,12 @@ a:hover {
    font-weight: bold;
    src: local("Quicksand Bold"),
    url(fonts/Quicksand_Bold.otf);
+}
+
+@font-face {
+   font-family: "Quicksand Light";
+   src: local("Quicksand Light"),
+   url(fonts/Quicksand_Light.otf);
 }
 
 @font-face {
@@ -95,21 +117,12 @@ a:hover {
 	z-index: 5;
 }
 
-#layer1, #layer2, #layer3 {
-	display: none;
-}
-
-#background, #layer1, #layer2, #layer3 {	
-	background-position: center;
-	position: absolute;
-	width: 100%;
-	height: 800px;
-}
-
 #intro {
-	position: relative;
-	z-index: -1;
-	height: 800px;
+    background: url("images/bg.jpg") no-repeat;
+    position: relative;
+    text-align: center;
+    z-index: -1;
+    height: 800px;
 }
 
 #works {
@@ -128,7 +141,6 @@ a:hover {
 
 .label {
 	background-color: #000000;
-	height: 20px;
 	font-family: OratorStd;
 	font-size: 13pt;
 	color: #f3f315;
