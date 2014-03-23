@@ -253,10 +253,6 @@ function init() {
             );
         }
     );
-		function(e) {
-			$("#menu").animate(
-                function() { 
-			        $("#menu_content").hide();
 
     $("#controls .next").click(function() { nextCurrent('.work') });
     $("#controls .previous").click(function() { prevCurrent('.work') });
