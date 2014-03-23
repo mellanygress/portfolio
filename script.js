@@ -217,6 +217,10 @@ function initWorks() {
 }
 
 function init() {
+    $('.quote')
+        .prepend('<div class="quote_left_bracket"></div>')
+        .prepend('<div class="quote_right_bracket"></div>');
+
     initWorks();
 
  	$('#layer1').show();

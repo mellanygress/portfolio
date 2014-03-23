@@ -1,4 +1,4 @@
-body, div, section {
+body, div, section, footer {
 	margin: 0;
     padding: 0;
     font-family: "Quicksand"
@@ -39,6 +39,7 @@ a:hover {
    src: local("Quicksand Light"),
    url(fonts/Quicksand_Light.otf);
 }
+
 @font-face {
    font-family: Quicksand;
    font-weight: normal;
@@ -118,15 +119,118 @@ a:hover {
 }
 
 #skills {
-    background: black;
+	background: url("images/skills_bg.jpg") center no-repeat;
     position: relative;
     width: 100%;
     height: 800px;
+    vertical-align: top;
 }
 
+#label {
+	background-color: #000000;
+	height: 20px;
+	font-family: OratorStd;
+	font-size: 13pt;
+	color: #f3f315;
+	text-align: center;
+	padding: 5px 15px 0px 15px;
+	letter-spacing: 0.2em;
+	border: red 1px;
+}
+
+#skills .quote {
+	position: relative;
+	display: inline-block;
+	float: left;
+	clear: both;
+	margin: 3em 0 0 10em;
+	width: 20em;
+	padding: 1em;
+}
+
+#adobe {
+	background: url("images/adobe.png");
+	position: relative;
+	display: inline-block;
+	float: left;
+	clear: both;
+	width: 684px;
+    height: 196px;
+	font-size: 13pt;
+	margin: 2em 0 2em 10em;
+}
+
+#adobe div {
+	position: absolute;
+}
+
+#adobe_ph { top: 175px; left: 110px;}
+#adobe_il { top: 175px; left: 230px;}
+#adobe_fl { top: 175px; left: 345px;}
+#adobe_ae { top: 175px; left: 460px;}
+#adobe_id { top: 175px; left: 520px;}
+
+#make_me {
+	background: url("images/make_me.png") center no-repeat;
+	position: relative;
+	display: inline-block;
+	float: left;
+	clear: left;
+	vertical-align: top;
+	width: 450px;
+    height: 350px;
+    font-size: 13pt;
+    margin-left: 10em;
+}
+
+#make_me div {
+	position: absolute;
+}
+
+#make_me p {
+	padding: 5px 0 0 0;
+	margin: 0;
+	font-size: 10pt;
+}
+
+#make_me_html { top: 252px; left: 37px; }
+#make_me_js   { top: 90px;  left: 247px; }
+#make_me_tech { top: 252px; left: 325px; }
+
+#timelapse {
+	position: relative;
+	display: inline-block;
+	vertical-align: text-top;
+	float: left;
+	clear: right;
+	background: url("images/timelapse.png") center no-repeat;
+	width: 530px;
+    height: 365px;
+    font-size: 11pt;
+    margin-left: 2em;
+}
+
+#timelapse div {
+	position: absolute;
+}
+
+#timelapse_multimedia { top: 274px; left: 2px; }
+#timelapse_concept { top: 45px; left: 82px; }
+#timelapse_art { top: 96px; left: 266px; }
+#timelapse_print { top: 280px; left: 350px; }
+#timelapse_ui { top: 115px; left: 436px; }
+
 #about {
+    background: url("images/about_bg.jpg") bottom no-repeat;
+    background-color: #f9f9f9;
     position: relative;
     width: 100%;
+    text-align: center;
+}
+
+#about .quote {
+	width: 16em;
+	margin: 3em;
 }
 
 .preview, .preview .background, .preview .content, .full .page {
@@ -232,4 +336,87 @@ a:hover {
 	background: #f3f315;
 	height: 100%;
 	width: 58px;
+}
+
+#text_about {
+	width: 52em;
+	word-wrap: normal;
+	margin: 0 auto;
+}
+
+#hello {
+	color: #f3f315;
+	text-transform: uppercase;
+	font-family: Arial;
+	font-size: 80pt;
+	margin-bottom: 20px;
+}
+
+a#button {
+	text-transform: uppercase;
+	font-size: 17px;
+	border: 1px solid;
+	padding: 1em 2em;
+	margin: 3em;
+	display: inline-block;
+}
+
+h1 {
+	font-size: 16px;
+	line-height: 19px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #575757;
+	text-align: left;
+	margin: 3.5em;
+}
+
+#text_about p {
+	font-size: 16px;
+	line-height: 19px;
+	color: #575757;
+	text-align: left;
+	margin: 1.5em;
+}
+
+.quote_left_bracket, .quote_right_bracket { position: absolute; width: 10px; height: 10px; }
+.quote_left_bracket { border-top: 1px solid; border-left: 1px solid; top: 0; left: 0; }
+.quote_right_bracket { border-bottom: 1px solid; border-right: 1px solid; bottom: 0; right: 0; }
+
+.quote {
+	position: relative;
+	display: inline-block;
+	padding: 1em;
+	font-size: 10pt;
+	text-align: left;
+}
+
+
+.quote_title {
+	margin: 0.5em 0;
+	display: inline-block;
+	font-size: 18pt;
+	border-bottom: 1px solid black;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.quote_text {
+	line-height: 16px;
+	color: #575757;
+	margin: 0;
+}
+
+.quote_author {
+	margin-top: 0.7em;
+	font-style: italic;
+}
+
+footer {
+	background: #f3f315;
+	bottom: 0;
+	position: relative;
+	padding-top: 1em;
+	padding-bottom: 0.6em;
+	width: 100%;
 }
