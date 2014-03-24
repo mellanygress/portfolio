@@ -130,8 +130,9 @@ a:hover {
 }
 
 #skills {
-	background: url("images/skills_bg.jpg") center no-repeat;
+	background: url("images/skills_bg.jpg") center repeat-x;
     position: relative;
+    display: inline-block;
     width: 100%;
     height: 800px;
     vertical-align: top;
