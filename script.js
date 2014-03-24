@@ -251,18 +251,14 @@ function initWorks() {
             }
         );
 
-        content.find('.quote .quote_text').html('&#8220;' + workInfo.quote + '&#8221;');
-        content.find('.quote .quote_author').html('&mdash; ' + workInfo.quoteAuthor + ' &mdash;');
+        content.find('.quote .quote_text').html(workInfo.quote);
+        content.find('.quote .quote_author').html(workInfo.quoteAuthor);
 
         initPages(work);
     }
 }
 
 function init() {
-    $('.quote')
-        .prepend('<div class="quote_left_bracket"></div>')
-        .prepend('<div class="quote_right_bracket"></div>');
-
     initWorks();
 
 	$('#strike').animate(
@@ -323,4 +319,14 @@ function init() {
             updateProgress();
         }
     );
+
+    $('.quote')
+        .prepend(
+            $('<div/>').addClass('quote_left_bracket'), 
+            $('<div/>').addClass('quote_right_bracket')
+        )
+        .find('.quote_text')
+            .prepend('&#8220;').append('&#8221;')
+        .siblings('.quote_author')
+            .prepend('&mdash;&nbsp;&nbsp;').append('&nbsp;&nbsp;&mdash;')
 }
