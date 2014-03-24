@@ -36,7 +36,7 @@ a:hover {
     top: -0.2em;
     font-size: 26pt;
     font-style: normal;
-    padding: 0.8em 0.2em 0.8em 0.2em;
+    padding: 1em 0.5em 1em 0.5em;
     white-space: nowrap;
     display: none;
 }
@@ -145,7 +145,7 @@ a:hover {
 	font-size: 13pt;
 	color: #f3f315;
 	text-align: center;
-	padding: 5px 15px 0px 15px;
+	padding: 6px 15px 5px 15px;
 	letter-spacing: 0.2em;
 	border: red 1px;
 }
