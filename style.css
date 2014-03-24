@@ -299,10 +299,10 @@ a:hover {
 
 #grid {
 	position: absolute;
-	top: -19px; 
+	top: -19px;
 	height: 819px;
 	width: 100%;
-	background: url("images/bg_grid_2.png") top; 
+	background: url("images/grid.png") top repeat-x;
 }
 
 #clickable {
