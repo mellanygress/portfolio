@@ -229,7 +229,7 @@ a:hover {
 #timelapse_ui { top: 115px; left: 436px; }
 
 #about {
-    background: url("images/about_bg.jpg") -10% 100% no-repeat;
+    background: url("images/about_bg.jpg") 50% 100% no-repeat;
     background-color: #f9f9f9;
     position: relative;
     width: 100%;
