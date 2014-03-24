@@ -109,9 +109,7 @@ a:hover {
 
 #menu {
 	position: fixed;
-	background: url("images/menu.png");
-	left:0px;
-	top:0px;
+	background: url("images/menu.png") no-repeat center;
 	width: 210px;
 	height: 153px;
 	z-index: 5;
