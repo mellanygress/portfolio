@@ -151,8 +151,6 @@ a:hover {
 }
 
 #skills .quote {
-	position: relative;
-	display: inline-block;
 	float: left;
 	clear: both;
 	margin: 3em 0 0 10em;
@@ -443,7 +441,6 @@ h1 {
 	font-size: 10pt;
 	text-align: left;
 }
-
 
 .quote_title {
 	margin: 0.5em 0;
