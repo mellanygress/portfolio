@@ -144,23 +144,14 @@ function toggleFull() {
     var works = $('#works');
     var exclusive = works.hasClass('exclusive');
     
-    if (exclusive) {
-        //works.css('top', 800);
-        $('html, body').scrollTop(800);
-    }
     $('#intro').toggle();
     $('#skills').toggle();
     $('#about').toggle();
 
     $('.work.current .preview .background').toggle();
 
-    if (!exclusive) {
-        works.animate({ top: 0 }, 200);
-    }
-
     if (exclusive) {
-        //works.css('top', 800);
-        //$("html, body").animate({ scrollTop:  605 }, 1500);
+        $("html, body").scrollTop(800);
     }
 
     works.toggleClass('exclusive');
