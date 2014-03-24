@@ -2,8 +2,8 @@ var WORKS = [
     {
         name: 'Extensive Logistics',
         type: 'identity // web',
-        description: 'MERLION &mdash; the largest full-range distributor of the Russian market',
-        quote: 'Everything must be take into account. If the fact will not fit the theory &mdash; let the theory go.',
+        description: 'MERLION - the largest full-range distributor of the Russian market',
+        quote: 'Everything must be take into account. If the fact will not fit the theory&mdash;let the theory go.',
         quoteAuthor: 'Agatha Christie',
         numPages: 9,
     },
@@ -26,7 +26,7 @@ var WORKS = [
     {
         name: 'Misterious Party',
         type: 'promo // event',
-        description: 'Annual New Year Party helded by MERLION had this year the film theme “The Great Gatsby”.',
+        description: 'Annual New Year Party held by MERLION had this year the film theme &#8220;The Great Gatsby&#8221;.',
         quote: 'The most beautiful thing we can experience is the mysterious. It is the source of all true art and all science.',
         quoteAuthor:'Albert Einstein',
         numPages: 4,
@@ -34,7 +34,7 @@ var WORKS = [
     {
         name: 'What Women Want',
         type: 'concept // pr',
-        description: '8 March is like the most mental pain fot men all over the Russia, but some how we found the best present!',
+        description: 'March 8 is like the most mental pain for men all over the Russia, but somehow we found the best present!',
         quote: 'Women and cats will do as they please, and men and dogs should relax and get used to the idea.',
         quoteAuthor: 'Robert A. Heinlein',
         numPages: 3,
