@@ -109,16 +109,14 @@ a:hover {
 
 #menu {
 	position: fixed;
-	background: url("images/menu.png");
-	left:0px;
-	top:0px;
+	background: url("images/menu.png") no-repeat center;
 	width: 210px;
 	height: 153px;
 	z-index: 5;
 }
 
 #intro {
-    background: url("images/bg.jpg") no-repeat;
+    background: url("images/bg.jpg") no-repeat center;
     position: relative;
     text-align: center;
     z-index: -1;
@@ -132,11 +130,17 @@ a:hover {
 }
 
 #skills {
-	background: url("images/skills_bg.jpg") center no-repeat;
+	background: url("images/skills_bg.jpg") center repeat-x;
     position: relative;
+    display: inline-block;
     width: 100%;
     height: 800px;
     vertical-align: top;
+}
+
+#skills .container {
+    width: 1600px;
+    margin: 0 auto;
 }
 
 .label {
@@ -231,7 +235,7 @@ a:hover {
 #timelapse_ui { top: 115px; left: 436px; }
 
 #about {
-    background: url("images/about_bg.jpg") bottom no-repeat;
+    background: url("images/about_bg.jpg") 50% 100% no-repeat;
     background-color: #f9f9f9;
     position: relative;
     width: 100%;
@@ -300,10 +304,10 @@ a:hover {
 
 #grid {
 	position: absolute;
-	top: -19px; 
+	top: -19px;
 	height: 819px;
 	width: 100%;
-	background: url("images/bg_grid_2.png") top; 
+	background: url("images/grid.png") top repeat-x;
 }
 
 #clickable {
@@ -390,7 +394,7 @@ a:hover {
 }
 
 #text_about {
-	width: 52em;
+	width: 800px;
 	word-wrap: normal;
 	margin: 0 auto;
 }
