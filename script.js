@@ -30,6 +30,19 @@ var WORKS = [
         quote: 'The most beautiful thing we can experience is the mysterious. It is the source of all true art and all science.',
         quoteAuthor:'Albert Einstein',
         numPages: 4,
+        customPages: {
+            1: {
+                type: 'video',
+                src: 'gatsby_1.mp4',
+                css: {
+                    position: 'absolute',
+                    'margin-left': '50%',
+                    left: '-440px',
+                    width: '880px',
+                    top: '170px',
+                }
+            }
+        } 
     },
     {
         name: 'What Women Want',
