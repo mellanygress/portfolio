@@ -138,6 +138,11 @@ a:hover {
     vertical-align: top;
 }
 
+#skills .container {
+    width: 1600px;
+    margin: 0 auto;
+}
+
 .label {
 	background-color: #000000;
 	font-family: OratorStd;
@@ -389,7 +394,7 @@ a:hover {
 }
 
 #text_about {
-	width: 52em;
+	width: 800px;
 	word-wrap: normal;
 	margin: 0 auto;
 }
