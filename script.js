@@ -128,7 +128,7 @@ function toggleFull() {
                 switch (e.keyCode) {
                     case 27:
                         $('body').off('keydown');
-                        $('#work_controls #close').click();
+                        $('#work_controls .close').click();
                         break;
                     case 37:
                         $('#work_controls .previous').click();
@@ -271,6 +271,74 @@ function initWorks() {
     }
 }
 
+function scaleCanvas(canvas) {
+    var ratio = window.devicePixelRatio;
+
+    if (!ratio) return;
+
+    var width = parseInt($(canvas).css('width'));
+    var height = parseInt($(canvas).css('height'));
+
+    $(canvas).attr('width', width * ratio);
+    $(canvas).attr('height', height * ratio);
+
+    var ctx = $(canvas)[0].getContext('2d');
+    ctx.scale(ratio, ratio);
+}
+
+function drawControl(canvas, drawShape) {
+    scaleCanvas(canvas);
+
+    var width = parseInt($(canvas).css('width'));
+    var r = width / 2;
+
+    var ctx = $(canvas)[0].getContext('2d');
+    ctx.beginPath();
+    ctx.arc(r, r, r - 1, 0, 2 * Math.PI);
+    ctx.globalAlpha = 0.6;
+    ctx.fillStyle = '#fff';
+    ctx.fill();
+    ctx.lineWidth = 1.5;
+    ctx.strokeStyle = '#555';
+    ctx.stroke();
+
+    if (drawShape) {
+        ctx.globalAlpha = 1;
+        ctx.beginPath();
+        drawShape(ctx, r);
+    }
+}
+
+function drawArrow(direction) {
+    return function(ctx, r) {
+        ctx.strokeStyle = '#000'; 
+        ctx.lineWidth = 2;
+        var c1 = 0.82;
+        var c2 = 0.5;
+        
+        var a = r * (2 - c1);
+        var b = r * c1;
+
+        ctx.moveTo(direction ? b : a, r * (1 - c2));
+        ctx.lineTo(direction ? a : b, r);
+        ctx.lineTo(direction ? b : a, r * (1 + c2));
+        ctx.stroke();
+    }
+}
+
+function drawX(ctx, r) {
+    var c = 0.7;
+    var a = r / 2 * (2 - c);
+    var b = 2 * r - a;
+    ctx.strokeStyle = '#000';
+    ctx.lineWidth = 2;
+    ctx.moveTo(a, a);
+    ctx.lineTo(b, b);
+    ctx.moveTo(a, b);
+    ctx.lineTo(b, a);
+    ctx.stroke();
+}
+
 function init() {
     initWorks();
 
@@ -319,7 +387,7 @@ function init() {
         progress.css('left', ($('.work.current .page.current').index() * progress.width()) + 'px');
     }
 
-    $("#work_controls #close").click(toggleFull);
+    $("#work_controls .close").click(toggleFull);
     $("#work_controls .next").click(
         function() {
             nextCurrent('.work.current .page') 
@@ -342,4 +410,16 @@ function init() {
             .prepend('&#8220;').append('&#8221;')
         .siblings('.quote_author')
             .prepend('&mdash;&nbsp;&nbsp;').append('&nbsp;&nbsp;&mdash;')
+
+    function makeControl(parent, drawShape) {
+        var width = $(parent).css('width');
+        return $('<canvas/>')
+            .css('width', width)
+            .css('height', width)
+            .each(function(e) { drawControl($(this), drawShape) })
+    }
+
+    $('.controls .previous').append(function() { return makeControl(this, drawArrow(0)) });
+    $('.controls .next').append(function() { return makeControl(this, drawArrow(1)) });
+    $('.controls .close').append(function() { return makeControl(this, drawX) });
 }

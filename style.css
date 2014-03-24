@@ -323,59 +323,55 @@ a:hover {
 	position: absolute;
 	margin-left: 50%;
 	top: 241px;
-	left: -588px;
-	width: 1175px;
+	left: -550px;
+	width: 1100px;
 	height: 352px;
 }
 
 #controls .previous {
-    background: url("images/arrow_left_0.png") center no-repeat;
     position: absolute;
-    left: 0px;
-    width: 78px;
-    height: 100%;
+    top: 50%;
+    margin-top: -30px;
+    left: 0;
+    width: 60px;
 }
 
 #controls .next {
-    background: url("images/arrow_right_0.png") center no-repeat;
     position: absolute;
-    right: 0px;
-    width: 78px;
-    height: 100%;
+    margin-top: -30px;
+    top: 50%;
+    right: 0;
+    width: 60px;
 }
 
 #work_controls {
 	position: absolute;
 	display: none;
 	margin-left: 50%;
-	left: -500px;
-	width: 1183px;
+	left: -625px;
+	width: 1250px;
 	height: 800px;
 }
 
 #work_controls .previous {
-    background: url("images/arrow_left_0.png") center no-repeat;
     position: absolute;
-    left: -117px;
-    width: 78px;
-    height: 100%;
+    left: 0;
+    top: 50%;
+    width: 60px;
 }
 
 #work_controls .next {
-    background: url("images/arrow_right_0.png") center no-repeat;
     position: absolute;
-    right: 72px;
-    width: 78px;
-    height: 100%;
+    right: 0;
+    top: 50%;
+    width: 60px;
 }
 
-#close {
-    background: url("images/close_x.png") center no-repeat;
-    position: absolute;
-    top: -320px;
-    left: 459px;
-    width: 79px;
-    height: 100%;
+#work_controls .close {
+    position: relative;
+    top: 30px;
+    margin: 0 auto;
+    width: 60px;
 }
 
 .progress {
