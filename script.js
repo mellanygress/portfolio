@@ -41,13 +41,13 @@ var WORKS = [
         customPages: {
             1: {
                 type: 'video',
-                src: 'kotiki_preview.mp4',
+                src: 'kotiki.mp4',
                 css: {
                     position: 'absolute',
-                    //width: '741px',
-                    height: '464px',
-                    top: '200px',
-                    left: '300px',
+                    'margin-left': '50%',
+                    left: '-440px',
+                    width: '880px',
+                    top: '170px',
                 }
             }
         } 
@@ -64,7 +64,7 @@ var WORKS = [
 
 function toggleCurrent(work) {
     work.toggleClass('current');
-    work.animate({ opacity: 'toggle' }, 1000);
+    work.animate({ opacity: 'toggle' }, 100);
 }
 
 function proceedCurrent(klass, next, loop) {
@@ -191,10 +191,10 @@ function initPages(work) {
             page.toggle();
         }
 
-        page.css('background', 'url(images/work_' + work.index() + '_' + j + '.jpg) center');
-
         if (pageInfo && pageInfo.type == 'video') {
             var video = $('<video/>');
+            var mask = $('<div/>');
+
             video[0].src = pageInfo.src;
             $.each(
                 pageInfo.css,
@@ -202,9 +202,22 @@ function initPages(work) {
                     video.css(k, v);
                 }
             );
+            
+            page.css('position', 'relative');
+            mask.css('position', 'absolute')
+                .css('top', 0)
+                .css('height', '800px')
+                .css('width', '100%')
+                .css('background', 'url(images/work_' + work.index() + '_' + j + '.png) center');
+
             page.append(video);
+            page.append(mask);
+
             page[0].onenter = function() { video[0].currentTime = 0; video[0].play(); }
             page[0].onexit = function() { video[0].pause(); }
+        }
+        else {
+            page.css('background', 'url(images/work_' + work.index() + '_' + j + '.jpg) center');
         }
     }
 }
