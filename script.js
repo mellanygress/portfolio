@@ -237,8 +237,8 @@ function initWorks() {
         var preview = work.find('.preview');
         var content = preview.find('.content');
 
-        preview.find('.background').css('background', 'url(images/work_' + i + '_bg.png) center');
-        preview.find('.background2').css('background', 'url(images/work_' + i + '.png) center')
+        preview.find('.background').css('background', 'url(images/work_' + i + '_bg.png) center no-repeat');
+        preview.find('.background2').css('background', 'url(images/work_' + i + '.png) center no-repeat')
 
         $.each(
             ['type', 'name', 'description'],
