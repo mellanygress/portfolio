@@ -116,7 +116,7 @@ a:hover {
 }
 
 #intro {
-    background: url("images/bg.jpg") no-repeat;
+    background: url("images/bg.jpg") no-repeat center;
     position: relative;
     text-align: center;
     z-index: -1;
