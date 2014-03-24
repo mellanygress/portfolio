@@ -269,7 +269,7 @@ function init() {
                     var menuItem = $('#menu_' + section.id);
                     var isCurrent = menuItem.hasClass('current');
 
-                    var inside = scrollTop > section.offsetTop - 10 && scrollTop < (section.offsetTop + 800);
+                    var inside = scrollTop > section.offsetTop - 300 && scrollTop < (section.offsetTop + 500);
 
                     if (!isCurrent) {
                         if (inside) {
