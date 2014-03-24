@@ -19,7 +19,7 @@ a:hover {
 #iwould { padding-top: 3em }
 
 #iwould, #goodgirl {
-    font-size: 68pt;
+    font-size: 62pt;
     font-family: "Quicksand Light";
     font-style: italic;
 }
@@ -34,7 +34,7 @@ a:hover {
 #digitaldesigner {
     position: absolute;
     top: -0.2em;
-    font-size: 26pt;
+    font-size: 24pt;
     font-style: normal;
     padding: 1em 0.5em 1em 0.5em;
     white-space: nowrap;
