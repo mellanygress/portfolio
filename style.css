@@ -374,6 +374,10 @@ a:hover {
     width: 60px;
 }
 
+.previous, .next, .close canvas:hover, #clickable:hover {
+    cursor: pointer;
+}
+
 .progress {
 	z-index: 2;
 	background: black;
