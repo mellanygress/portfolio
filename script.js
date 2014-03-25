@@ -77,7 +77,7 @@ var WORKS = [
 
 function toggleCurrent(work) {
     work.toggleClass('current');
-    work.animate({ opacity: 'toggle' }, 500);
+    work.animate({ opacity: 'toggle' }, 1500);
 }
 
 function proceedCurrent(klass, next, loop) {
