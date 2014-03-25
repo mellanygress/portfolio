@@ -378,13 +378,13 @@ function drawX(ctx, r) {
 function init() {
     initWorks();
 
-	$('#strike').animate(
+    $('#strike').animate(
         { opacity: 'toggle' }, 
-		1000,
-		function() {
-			$('#digitaldesigner').animate({ opacity: 'toggle' }, 2000);
-		}
-	);
+        1000,
+        function() {
+            $('#digitaldesigner').animate({ opacity: 'toggle' }, 2000);
+        }
+    );
 
     $(window).scroll(
         function() {

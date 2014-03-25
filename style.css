@@ -1,19 +1,19 @@
 body, div, section, footer {
-	margin: 0;
+    margin: 0;
     padding: 0;
     font-family: "Quicksand"
 }
 
 a {
-	text-decoration: none;
-	color: black;
+    text-decoration: none;
+    color: black;
 }
 
 a:hover {
-	text-decoration: line-through;
-	color: white;
-	font-style: italic;
-	background-color: black;
+    text-decoration: line-through;
+    color: white;
+    font-style: italic;
+    background-color: black;
 }
 
 #iwould { padding-top: 3em }
@@ -85,35 +85,35 @@ a:hover {
 }
 
 #menu ul {
-	margin: 0;
-	padding: 1em;
-	list-style-type: none;
+    margin: 0;
+    padding: 1em;
+    list-style-type: none;
 }
 
 #menu li {
-	margin-left: 0;
-	display: block;
-	padding: 0.2em;
+    margin-left: 0;
+    display: block;
+    padding: 0.2em;
 }
 
 #menu a {
-	font-size: 13pt;
-	width: 50px;
-	display: block;
+    font-size: 13pt;
+    width: 50px;
+    display: block;
 }
 
 #menu a:hover {
-	text-decoration: line-through;
-	background: none;
-	color: black;
+    text-decoration: line-through;
+    background: none;
+    color: black;
 }
 
 #menu {
-	position: fixed;
-	background: url("images/menu.png") no-repeat center;
-	width: 210px;
-	height: 153px;
-	z-index: 5;
+    position: fixed;
+    background: url("images/menu.png") no-repeat center;
+    width: 210px;
+    height: 153px;
+    z-index: 5;
 }
 
 #intro {
@@ -131,7 +131,7 @@ a:hover {
 }
 
 #skills {
-	background: url("images/skills_bg.jpg") center repeat-x;
+    background: url("images/skills_bg.jpg") center repeat-x;
     position: relative;
     display: inline-block;
     width: 100%;
@@ -145,38 +145,38 @@ a:hover {
 }
 
 .label {
-	background-color: #000000;
-	font-family: OratorStd;
-	font-size: 13pt;
-	color: #f3f315;
-	text-align: center;
-	padding: 6px 15px 5px 15px;
-	letter-spacing: 0.2em;
-	border: red 1px;
+    background-color: #000000;
+    font-family: OratorStd;
+    font-size: 13pt;
+    color: #f3f315;
+    text-align: center;
+    padding: 6px 15px 5px 15px;
+    letter-spacing: 0.2em;
+    border: red 1px;
 }
 
 #skills .quote {
-	float: left;
-	clear: both;
-	margin: 3em 0 0 10em;
-	width: 20em;
-	padding: 1em;
+    float: left;
+    clear: both;
+    margin: 3em 0 0 10em;
+    width: 20em;
+    padding: 1em;
 }
 
 #adobe {
-	background: url("images/adobe.png");
-	position: relative;
-	display: inline-block;
-	float: left;
-	clear: both;
-	width: 684px;
+    background: url("images/adobe.png");
+    position: relative;
+    display: inline-block;
+    float: left;
+    clear: both;
+    width: 684px;
     height: 196px;
-	font-size: 13pt;
-	margin: 2em 0 2em 10em;
+    font-size: 13pt;
+    margin: 2em 0 2em 10em;
 }
 
 #adobe div {
-	position: absolute;
+    position: absolute;
 }
 
 #adobe_ph { top: 175px; left: 110px;}
@@ -186,26 +186,26 @@ a:hover {
 #adobe_id { top: 175px; left: 520px;}
 
 #make_me {
-	background: url("images/make_me.png") center no-repeat;
-	position: relative;
-	display: inline-block;
-	float: left;
-	clear: left;
-	vertical-align: top;
-	width: 450px;
+    background: url("images/make_me.png") center no-repeat;
+    position: relative;
+    display: inline-block;
+    float: left;
+    clear: left;
+    vertical-align: top;
+    width: 450px;
     height: 350px;
     font-size: 13pt;
     margin-left: 10em;
 }
 
 #make_me div {
-	position: absolute;
+    position: absolute;
 }
 
 #make_me p {
-	padding: 5px 0 0 0;
-	margin: 0;
-	font-size: 10pt;
+    padding: 5px 0 0 0;
+    margin: 0;
+    font-size: 10pt;
 }
 
 #make_me_html { top: 252px; left: 37px; }
@@ -213,20 +213,20 @@ a:hover {
 #make_me_tech { top: 252px; left: 325px; }
 
 #timelapse {
-	position: relative;
-	display: inline-block;
-	vertical-align: text-top;
-	float: left;
-	clear: right;
-	background: url("images/timelapse.png") center no-repeat;
-	width: 530px;
+    position: relative;
+    display: inline-block;
+    vertical-align: text-top;
+    float: left;
+    clear: right;
+    background: url("images/timelapse.png") center no-repeat;
+    width: 530px;
     height: 365px;
     font-size: 11pt;
     margin-left: 2em;
 }
 
 #timelapse div {
-	position: absolute;
+    position: absolute;
 }
 
 #timelapse_multimedia { top: 274px; left: 2px; }
@@ -244,14 +244,14 @@ a:hover {
 }
 
 #about .quote {
-	width: 16em;
-	margin: 3em;
+    width: 16em;
+    margin: 3em;
 }
 
 .preview, .preview .background, .full .page {
-	position: absolute;
-	height: 100%;
-	width: 100%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
 
 .full .page {
@@ -260,11 +260,11 @@ a:hover {
 }
 
 .preview .background {
-	z-index: -1;
+    z-index: -1;
 }
 
 .full {
-	display: none;
+    display: none;
 }
 
 .preview {
@@ -319,28 +319,28 @@ a:hover {
 }
 
 #grid {
-	position: absolute;
-	top: -19px;
-	height: 819px;
-	width: 100%;
-	background: url("images/grid.png") 262px top repeat-x;
+    position: absolute;
+    top: -19px;
+    height: 819px;
+    width: 100%;
+    background: url("images/grid.png") 262px top repeat-x;
 }
 
 #clickable {
-	position: absolute;
-	margin-left: 50%;
-	left: -462px;
-	width: 924px;
-	height: 352px;
+    position: absolute;
+    margin-left: 50%;
+    left: -462px;
+    width: 924px;
+    height: 352px;
 }
 
 #controls {
-	position: absolute;
-	margin-left: 50%;
-	top: 241px;
-	left: -550px;
-	width: 1100px;
-	height: 352px;
+    position: absolute;
+    margin-left: 50%;
+    top: 241px;
+    left: -550px;
+    width: 1100px;
+    height: 352px;
 }
 
 #controls .previous {
@@ -360,12 +360,12 @@ a:hover {
 }
 
 #work_controls {
-	position: absolute;
-	display: none;
-	margin-left: 50%;
-	left: -610px;
-	width: 1220px;
-	height: 800px;
+    position: absolute;
+    display: none;
+    margin-left: 50%;
+    left: -610px;
+    width: 1220px;
+    height: 800px;
 }
 
 #work_controls .previous {
@@ -394,60 +394,60 @@ a:hover {
 }
 
 .progress {
-	z-index: 2;
-	background: black;
-	position: absolute;
-	bottom: 17px;
-	left: 233px;
-	height: 5px;
+    z-index: 2;
+    background: black;
+    position: absolute;
+    bottom: 17px;
+    left: 233px;
+    height: 5px;
 }
 
 .progress .current {
-	position: absolute;
-	background: #f3f315;
-	height: 100%;
-	width: 58px;
+    position: absolute;
+    background: #f3f315;
+    height: 100%;
+    width: 58px;
 }
 
 #text_about {
-	width: 800px;
-	word-wrap: normal;
-	margin: 0 auto;
+    width: 800px;
+    word-wrap: normal;
+    margin: 0 auto;
 }
 
 #hello {
-	color: #f3f315;
-	text-transform: uppercase;
-	font-family: Arial;
-	font-size: 80pt;
-	margin-bottom: 20px;
+    color: #f3f315;
+    text-transform: uppercase;
+    font-family: Arial;
+    font-size: 80pt;
+    margin-bottom: 20px;
 }
 
 a#button {
-	text-transform: uppercase;
-	font-size: 17px;
-	border: 1px solid;
-	padding: 1em 2em;
-	margin: 3em;
-	display: inline-block;
+    text-transform: uppercase;
+    font-size: 17px;
+    border: 1px solid;
+    padding: 1em 2em;
+    margin: 3em;
+    display: inline-block;
 }
 
 h1 {
-	font-size: 16px;
-	line-height: 19px;
-	text-transform: uppercase;
-	font-weight: bold;
-	color: #575757;
-	text-align: left;
-	margin: 3.5em;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #575757;
+    text-align: left;
+    margin: 3.5em;
 }
 
 #text_about p {
-	font-size: 16px;
-	line-height: 19px;
-	color: #575757;
-	text-align: left;
-	margin: 1.5em;
+    font-size: 16px;
+    line-height: 19px;
+    color: #575757;
+    text-align: left;
+    margin: 1.5em;
 }
 
 .quote_left_bracket, .quote_right_bracket { position: absolute; width: 10px; height: 10px; }
@@ -455,38 +455,38 @@ h1 {
 .quote_right_bracket { border-bottom: 1px solid; border-right: 1px solid; bottom: 0; right: 0; }
 
 .quote {
-	position: relative;
-	display: inline-block;
-	padding: 1em;
-	font-size: 10pt;
-	text-align: left;
+    position: relative;
+    display: inline-block;
+    padding: 1em;
+    font-size: 10pt;
+    text-align: left;
 }
 
 .quote_title {
-	margin: 0.5em 0;
-	display: inline-block;
-	font-size: 18pt;
-	border-bottom: 1px solid black;
-	text-transform: uppercase;
-	font-weight: bold;
+    margin: 0.5em 0;
+    display: inline-block;
+    font-size: 18pt;
+    border-bottom: 1px solid black;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .quote_text {
-	line-height: 16px;
-	color: #575757;
-	margin: 0;
+    line-height: 16px;
+    color: #575757;
+    margin: 0;
 }
 
 .quote_author {
-	margin-top: 0.7em;
-	font-style: italic;
+    margin-top: 0.7em;
+    font-style: italic;
 }
 
 footer {
-	background: #f3f315;
-	bottom: 0;
-	position: relative;
-	padding-top: 1em;
-	padding-bottom: 0.6em;
-	width: 100%;
+    background: #f3f315;
+    bottom: 0;
+    position: relative;
+    padding-top: 1em;
+    padding-bottom: 0.6em;
+    width: 100%;
 }
