@@ -308,7 +308,7 @@ a:hover {
 	top: -19px;
 	height: 819px;
 	width: 100%;
-	background: url("images/grid.png") top repeat-x;
+	background: url("images/grid.png") 262px top repeat-x;
 }
 
 #clickable {
@@ -383,7 +383,7 @@ a:hover {
 	background: black;
 	position: absolute;
 	bottom: 17px;
-	left: 238px;
+	left: 248px;
 	height: 5px;
 }
 
