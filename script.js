@@ -221,7 +221,7 @@ function initPages(work) {
                 .css('top', 0)
                 .css('height', '800px')
                 .css('width', '100%')
-                .css('background-image', 'url(images/work_' + work.index() + '_' + j + '.png)');
+                .css('background', 'url(images/work_' + work.index() + '_' + j + '.png) center no-repeat');
 
             page.append(video);
             page.append(mask);
