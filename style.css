@@ -348,8 +348,8 @@ a:hover {
 	position: absolute;
 	display: none;
 	margin-left: 50%;
-	left: -625px;
-	width: 1250px;
+	left: -610px;
+	width: 1220px;
 	height: 800px;
 }
 
@@ -383,7 +383,7 @@ a:hover {
 	background: black;
 	position: absolute;
 	bottom: 17px;
-	left: 248px;
+	left: 233px;
 	height: 5px;
 }
 
