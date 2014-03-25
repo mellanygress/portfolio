@@ -248,7 +248,7 @@ a:hover {
 	margin: 3em;
 }
 
-.preview, .preview .background, .preview .background2, .full .page {
+.preview, .preview .background, .full .page {
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -264,7 +264,6 @@ a:hover {
 
 .preview {
     text-align: center;
-    background-position: center;
 }
 
 .preview .type {
@@ -301,6 +300,17 @@ a:hover {
     top: 300px;
     height: 250px; 
     width: 350px;
+}
+
+.cover {
+    position: absolute;
+    display: inline-block;
+    left: 50%; 
+    top: 50%; 
+    margin-top: -139px;
+    margin-left: -379px;
+    height: 400px; 
+    width: 758px;
 }
 
 #grid {

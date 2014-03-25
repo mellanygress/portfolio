@@ -77,7 +77,7 @@ var WORKS = [
 
 function toggleCurrent(work) {
     work.toggleClass('current');
-    work.animate({ opacity: 'toggle' }, 100);
+    work.animate({ opacity: 'toggle' }, 500);
 }
 
 function proceedCurrent(klass, next, loop) {
@@ -255,8 +255,15 @@ function initWorks() {
         var content = preview.find('.content');
 
         preview.find('.background').css('background', 'url(images/work_' + i + '_bg.png) center no-repeat');
-        preview.find('.background2').css('background', 'url(images/work_' + i + '.png) center no-repeat')
 
+        (function(work) {
+            var img = new Image();
+            img.src = 'images/work_' + i + '_0.jpg';
+            img.onload = function() { 
+                drawPreview(work.find('.cover'), this);
+            };
+        })(work);
+    
         $.each(
             ['type', 'name', 'description'],
             function(i, f) { 
@@ -284,6 +291,35 @@ function scaleCanvas(canvas) {
 
     var ctx = $(canvas)[0].getContext('2d');
     ctx.scale(ratio, ratio);
+}
+
+function drawPreview(canvas, img) {
+    scaleCanvas(canvas);
+    var ctx = $(canvas)[0].getContext('2d');
+
+    ctx.beginPath();
+    ctx.arc(173, 230, 118, 0, 2 * Math.PI);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.globalCompositeOperation = 'source-atop';
+    ctx.drawImage($(img)[0], -580, -260);
+
+    ctx.lineWidth = 1.2;
+
+    ctx.globalCompositeOperation = 'destination-over';
+    ctx.beginPath();
+    ctx.rect(1, 1, 754, 307);
+    ctx.closePath();
+    ctx.fillStyle = '#fff';
+    ctx.stroke();
+    ctx.fill();
+
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.beginPath();
+    ctx.arc(173, 230, 118, 0, 2 * Math.PI);
+    ctx.closePath();
+    ctx.stroke();
 }
 
 function drawControl(canvas, drawShape) {
