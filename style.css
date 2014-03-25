@@ -254,6 +254,11 @@ a:hover {
 	width: 100%;
 }
 
+.full .page {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .preview .background {
 	z-index: -1;
 }

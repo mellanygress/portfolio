@@ -221,7 +221,7 @@ function initPages(work) {
                 .css('top', 0)
                 .css('height', '800px')
                 .css('width', '100%')
-                .css('background', 'url(images/work_' + work.index() + '_' + j + '.png) center');
+                .css('background-image', 'url(images/work_' + work.index() + '_' + j + '.png)');
 
             page.append(video);
             page.append(mask);
@@ -230,7 +230,7 @@ function initPages(work) {
             page[0].onexit = function() { video[0].pause(); }
         }
         else {
-            page.css('background', 'url(images/work_' + work.index() + '_' + j + '.jpg) center');
+            page.css('background-image', 'url(images/work_' + work.index() + '_' + j + '.jpg)');
         }
     }
 }
